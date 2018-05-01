@@ -76,10 +76,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fullrest',
-        #'USER': 'dba',
-        #'PASSWORD': 'root',
+        'USER': 'dba',
+        'PASSWORD': 'root',
         "HOST": '127.0.0.1',
-        'PORT': '54321'
+        'PORT': '5432'
     }
 }
 
