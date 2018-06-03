@@ -3,7 +3,6 @@ from drones.models import DroneCategory
 from drones.models import Drone
 from drones.models import Pilot
 from drones.models import Competition
-import drones.views
 
 
 class DroneCategorySerializer(serializers.HyperlinkedModelSerializer):
@@ -43,6 +42,7 @@ class DroneSerializer(serializers.HyperlinkedModelSerializer):
 
 class CompetitionSerializer(serializers.HyperlinkedModelSerializer):
     drone = DroneSerializer()
+
     class Meta:
         model = Competition
         fields = (
@@ -75,10 +75,11 @@ class PilotSerializer(serializers.HyperlinkedModelSerializer):
             'competitions'
         )
 
+
 class PilotCompetitionSerializer(serializers.ModelSerializer):
-    #Display the pilot name
+    # Display the pilot name
     pilot = serializers.SlugRelatedField(queryset=Pilot.objects.all(), slug_field='name')
-    #Drones name
+    # Drones name
     drone = serializers.SlugRelatedField(queryset=Drone.objects.all(), slug_field='name')
 
     class Meta:

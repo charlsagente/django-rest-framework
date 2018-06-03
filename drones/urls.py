@@ -10,6 +10,6 @@ urlpatterns = [
     url(r'^pilots/(?P<pk>[0-9]+)', views.PilotDetail.as_view(), name=views.PilotDetail.name),
     url(r'^competitions/$', views.CompetitionList.as_view(), name=views.CompetitionList.name),
     url(r'^competitions/(?P<pk>[0-9]+)$', views.CompetitionDetail.as_view(), name=views.CompetitionDetail.name),
-    url(r'^$', views.ApiRoot.as_view(), views.ApiRoot.name)
+    url(r'^$', views.ApiRoot.as_view(), name=views.ApiRoot.name)
 
 ]

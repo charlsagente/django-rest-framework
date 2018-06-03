@@ -43,7 +43,7 @@ class PilotList(generics.ListCreateAPIView):
 class PilotDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Pilot.objects.all()
     serializer_class = PilotSerializer
-    name = 'pilot-list'
+    name = 'pilot-detail'
 
 
 class CompetitionList(generics.ListCreateAPIView):
